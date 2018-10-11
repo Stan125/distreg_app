@@ -9,5 +9,4 @@
 
 library(distreg.vis)
 load("wage_model.RData", envir = globalenv())
-exists("wage_model")
-distreg.vis::vis()
+eval(quote(distreg.vis::vis()), envir = globalenv())
