@@ -8,5 +8,6 @@
 #
 
 library(distreg.vis)
-load("wage_model.RData")
+load("wage_model.RData", envir = globalenv())
+exists("wage_model")
 distreg.vis::vis()
