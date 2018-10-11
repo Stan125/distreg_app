@@ -9,4 +9,5 @@
 
 library(distreg.vis)
 load("wage_model.RData", envir = globalenv())
+Wage <- ISLR::Wage
 eval(quote(distreg.vis::vis()), envir = globalenv())
