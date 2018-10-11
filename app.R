@@ -7,12 +7,6 @@
 #    http://shiny.rstudio.com/
 #
 
-library(shiny)
 library(distreg.vis)
-library(gamlss)
-library(ISLR)
-Wage <- ISLR::Wage
-wage_model <- gamlss(wage ~ ps(age) + race + year + education,
-                     ~ ps(age) + race + year + education,
-                     data = Wage, family = LOGNO())
+load("wage_model.RData")
 distreg.vis::vis()
